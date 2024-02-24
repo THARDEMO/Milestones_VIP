@@ -1,0 +1,14 @@
+[
+    {
+        "id": null,
+        "title": null,
+        "rank": null,
+        "favourite": null
+    },
+    {
+        "id": 0,
+        "title": "Kratos Of Sparta",
+        "rank": 10,
+        "favourite": false
+    }
+]
