@@ -1,9 +1,17 @@
 
-async function renderGames() {
+const componentGames = {
+    domID: 'games',
+    parentID: '#listings',
+
+    preRender: () => cManager.renderComponent( componentGames ),
+    render: ( DOM ) => renderGames( DOM ),
+}
+
+async function renderGames( DOM ) {
     const parentDOM = document.querySelector( '#listings');
 
-    const DOM = document.createElement( 'div');
-    DOM.classList.add( 'games');
+    // const DOM = document.createElement( 'div');
+    // DOM.classList.add( 'games');
     DOM.classList.add( 'listingCategory');
 
     DOM.innerHTML = `

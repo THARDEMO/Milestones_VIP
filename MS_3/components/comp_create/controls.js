@@ -1,8 +1,15 @@
 
+const componentControls = {
+    domID: 'buttonContainer',
+    parentID: '#create',
 
-function renderControls( ) {
+    preRender: () => cManager.renderComponent( componentControls ),
+    render: ( DOM ) => renderControls( DOM ),
+}
 
-    const parentDOM = document.querySelector( '#create');
+function renderControls( DOM ) {
+
+    const parentDOM = document.querySelector( componentControls.parentID);
     const buttons = ['games', 'characters'];
 
     for( const buttonContent of buttons) {

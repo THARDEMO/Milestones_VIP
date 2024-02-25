@@ -1,8 +1,15 @@
+const componentCreate = {
+    domID: 'inputFields',
+    parentID: '#create',
 
-function renderCreate() {
+    preRender: () => cManager.renderComponent( componentCreate ),
+    render: ( DOM ) => renderCreate( DOM ),
+}
+
+function renderCreate( DOM ) {
 
     const parendDOM = document.querySelector( '#create');
-    const DOM = document.createElement( 'div');
+    // const DOM = document.createElement( 'div');
 
     DOM.innerHTML = `
        <input type="text" name="field" placeholder="Title: game or character"></input>

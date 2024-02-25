@@ -1,12 +1,12 @@
+//STATE VAR -- collection of data on page
 const STATE = {};
-
+//update functions are saved here to be accesed on STATE.update()
+const UPDATE = {};
+// Path to functions //SIMULATE IMPORT/EXPORT 
 const state = {
     get,
     update,
-    renderUI
 }
-
-const UPDATE = {};
 
 async function get( entity, field, type_id = null) {
     const rqst = new Request( `${window.location.origin}/MS_2/API/GET.php?entity=${entity}&fields=${field}`);
@@ -52,16 +52,6 @@ async function update( entity, fields = [], method = 'POST', updates = []) {
 
     const data = await fetcher( rqst);
     updates.forEach( u => UPDATE[u]( data, method, entity));
-}
-
-function renderUI() {
-    //tömmer alla containers från DOM element för rerenders
-    const queryContainers = [ 'create', 'compiler', 'listings'];
-    queryContainers.forEach( query => {document.querySelector( `#${query}`).innerHTML = null})
-
-    //Renderar alla komponenter på nytt
-    const components = [renderGames, renderCharacters, renderCreate, renderControls, renderCompiler];
-    components.forEach( component => component());
 }
 
 async function fetcher( rqst) {

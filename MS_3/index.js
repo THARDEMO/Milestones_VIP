@@ -2,4 +2,7 @@
 
 // components.forEach( component => component());
 
-state.renderUI();
+// state.renderUI();
+
+const components = [componentGames, componentCharacters, componentCreate, componentControls, componentCompiler];
+components.forEach( component => component.preRender());

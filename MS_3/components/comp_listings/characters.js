@@ -1,12 +1,16 @@
 
-async function renderCharacters() {
+const componentCharacters = {
+    domID: 'characters',
+    parentID: '#listings',
+
+    preRender: () => cManager.renderComponent( componentCharacters ),
+    render: ( DOM ) => renderCharacters( DOM ),
+}
+
+async function renderCharacters( DOM ) {
 
     const parentDOM = document.querySelector( '#listings');
-
-    const DOM = document.createElement( 'div');
-    DOM.classList.add( 'characters');
     DOM.classList.add( 'listingCategory');
-
 
     DOM.innerHTML = `
         <h2>Characters</h2>

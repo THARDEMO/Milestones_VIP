@@ -1,10 +1,17 @@
 
+const componentCompiler = {
+    domID: 'compilerContainer',
+    parentID: '#compiler',
 
-async function renderCompiler() {
+    preRender: () => cManager.renderComponent( componentCompiler ),
+    render: ( DOM ) => renderCompiler( DOM ),
+}
 
-    const parendDOM = document.querySelector( '#compiler');
+async function renderCompiler( DOM ) {
+
+    const parendDOM = document.querySelector( componentCompiler.parentID);
     parendDOM.innerHTML = '';
-    const DOM = document.createElement( 'div');
+
     let entities = [ 'games', 'characters'];
 
     let favourites = 0;
