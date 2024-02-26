@@ -1,0 +1,20 @@
+[
+    {
+        "id": null,
+        "title": null,
+        "rank": null,
+        "favourite": null
+    },
+    {
+        "id": 0,
+        "title": "God of War: Ragnar\u00f6k",
+        "rank": 10,
+        "favourite": false
+    },
+    {
+        "id": 1,
+        "title": "testing",
+        "rank": "4",
+        "favourite": false
+    }
+]
