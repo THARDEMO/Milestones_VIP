@@ -16,11 +16,5 @@
         "title": "testing",
         "rank": "4",
         "favourite": false
-    },
-    {
-        "id": 2,
-        "title": "Testing three",
-        "rank": "10",
-        "favourite": false
     }
 ]

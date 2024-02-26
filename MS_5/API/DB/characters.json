@@ -7,20 +7,14 @@
     },
     {
         "id": 0,
-        "title": "God of War: Ragnar\u00f6k",
+        "title": "Kratos Of Sparta",
         "rank": 10,
         "favourite": false
     },
     {
         "id": 1,
-        "title": "testing",
-        "rank": "4",
-        "favourite": false
-    },
-    {
-        "id": 2,
-        "title": "Testing three",
-        "rank": "10",
+        "title": "Testing two",
+        "rank": "7",
         "favourite": false
     }
 ]

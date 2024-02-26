@@ -9,7 +9,7 @@ const state = {
 }
 
 async function get( entity, field, type_id = null) {
-    const rqst = new Request( `${window.location.origin}/MS_2/API/GET.php?entity=${entity}&fields=${field}`);
+    const rqst = new Request( `${window.location.origin}/MS_3/API/GET.php?entity=${entity}&fields=${field}`);
     
     //ENTITY har inte hämtats än:: Existerar ej i STATE
     if( !STATE[entity]) {
@@ -45,7 +45,7 @@ async function get( entity, field, type_id = null) {
 
 async function update( entity, fields = [], method = 'POST', updates = []) {
     
-    const rqst = new Request( `${window.location.origin}/MS_2/API/${method}.php`, {
+    const rqst = new Request( `${window.location.origin}/MS_3/API/${method}.php`, {
         method: method,
         body: JSON.stringify( {entity:entity, fields: fields})
     });
