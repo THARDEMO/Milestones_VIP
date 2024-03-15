@@ -23,8 +23,12 @@ Intern Kommunikation
     
     VG
     - PubSub ( publish & subscribe pattern )
+    - Fetch_Manager
 
 API 
     - FIELDS & ENTITIES
     - Fetcher funktion :: centraliserad fetcher ( 1 fetch )
-    - Sebbes U1 || entities.php
+    - Abstraherad backend - GET.php / POST.php / PATCH.php osv
+
+DJUPARE LÄRANDE
+    - index.php ( ansvarar för att importera components och kalla på component.prerender() )

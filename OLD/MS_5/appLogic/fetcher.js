@@ -20,3 +20,7 @@ export async function fetcher( rqst ) {
    console.log( console.log( response));
    
 }
+
+async function fetchManager( entity, fields, method) {
+   
+}

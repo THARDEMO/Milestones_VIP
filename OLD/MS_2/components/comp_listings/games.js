@@ -41,9 +41,6 @@ function renderGamesInstances( {id, title, rank, favorite} ) {
 
     // const favoriteButton = document.createElement( 'button');
     // favoriteButton.textContent = 'add to favorites';
-
-    
-
 }
 
 UPDATE['games'] = async ( data, method ) => {

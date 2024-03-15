@@ -25,7 +25,7 @@ const state = {
 
 const UPDATE = {};
 
-async function get( entity, field, type_id = null) {
+async function get( entity, field = 'all', type_id = null) {
 
 
     if( field === 'all') {

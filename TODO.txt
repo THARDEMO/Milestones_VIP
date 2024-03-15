@@ -1,0 +1,21 @@
+componentManager :: 
+    cManager.renderComponent( dom_id, parent_id, elementtype)
+    -- returns dom_id
+    -- CALLED in component
+
+COMPONENTS
+    kallar barns render
+
+    UPDATE
+    RENDER ONE
+    DELETE?
+
+STATE
+
+    SIMPLIFIERA 
+
+    SWITCH 
+        cases = METHOD
+
+
+FAVORITE

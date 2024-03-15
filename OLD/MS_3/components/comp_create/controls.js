@@ -35,7 +35,5 @@ function pushToState( e ) {
     if( !textContent) return;
 
 
-    
-
     state.update( target, [{title: textContent}, {rank: rank}, {favourite: false}], 'POST', [target, 'compiler']);
 }

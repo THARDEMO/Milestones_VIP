@@ -51,6 +51,7 @@ async function update( entity, fields = [], method = 'POST', updates = []) {
     });
 
     const data = await fetcher( rqst);
+    
     updates.forEach( u => UPDATE[u]( data, method, entity));
 }
 

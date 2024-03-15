@@ -107,7 +107,7 @@ p {
     box-shadow: 0 5px 5px var(--shadowsOP);
     border-radius: var(--borderRad);
 
-    /* & div { */
+    & div {
         height: 100%;
         display: flex;
         flex-direction: column;
@@ -119,7 +119,7 @@ p {
             justify-content: space-between;
             padding: 5px;
         }
-    /* } */
+    }
 
 }
 #listings {
@@ -152,25 +152,13 @@ p {
         padding: var(--InnerPad);
 
         & li {
-            display: flex;
-            justify-content: space-between;
-
             padding: var(--InnerPad);
             border-bottom: 1px solid var(--textColor1);
 
-            & .info {
-                width: 50%;
+            & div {
+                width: 100%;
                 display: flex;
                 justify-content: space-between;
-
-                & p:nth-child(2) {
-                    font-weight: bold;
-                    text-align: center;
-                }
-            }
-
-            & .favouriteStar {
-                cursor: pointer;
             }
 
         }
