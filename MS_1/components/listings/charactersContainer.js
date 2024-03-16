@@ -12,7 +12,7 @@ function renderCharactersContainer( parentID ) {
 
     const charactersListing = document.createElement( 'ul');
     charactersListing.classList.add( 'listingContainer');
-    charactersListing.id = 'charactersListing';
+    charactersListing.id = 'characters';
     DOM.append( charactersListing);
 
     STATE['characters'].forEach( character => listingInstance( charactersListing.id, character));

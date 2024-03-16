@@ -171,6 +171,32 @@ p {
 
             & .favouriteStar {
                 cursor: pointer;
+                transition: scale .3s;
+            }
+
+            & .favouriteStar:hover {
+                scale: 1.2;
+            }
+
+
+            & .deleteListing {
+                height: 25px;
+                width: 25px;
+                border-radius: 50%;
+                background: rgb(223, 124, 124);
+                cursor: pointer;
+
+                background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cmask id='mask0_11_7' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='0' y='0' width='25' height='25'%3E%3Crect x='0.262909' y='0.00866699' width='24' height='24' fill='%23D9D9D9'/%3E%3C/mask%3E%3Cg mask='url(%23mask0_11_7)'%3E%3Cpath d='M7.26291 21.0087C6.71291 21.0087 6.24208 20.8128 5.85041 20.4212C5.45874 20.0295 5.26291 19.5587 5.26291 19.0087V6.00867H4.26291V4.00867H9.26291V3.00867H15.2629V4.00867H20.2629V6.00867H19.2629V19.0087C19.2629 19.5587 19.0671 20.0295 18.6754 20.4212C18.2837 20.8128 17.8129 21.0087 17.2629 21.0087H7.26291ZM17.2629 6.00867H7.26291V19.0087H17.2629V6.00867ZM9.26291 17.0087H11.2629V8.00867H9.26291V17.0087ZM13.2629 17.0087H15.2629V8.00867H13.2629V17.0087Z' fill='white'/%3E%3C/g%3E%3C/svg%3E%0A");
+                background-size: 20px;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                transition: scale .3s;
+            }
+
+            & .deleteListing:hover {
+                background-color: rgb(232, 71, 71);
+                scale: 1.2;
             }
 
         }

@@ -12,7 +12,7 @@ function renderGamesContainer( parentID) {
     
     const gamesListing = document.createElement( 'ul');
     gamesListing.classList.add( 'listingContainer');
-    gamesListing.id = 'gamesListing';
+    gamesListing.id = 'games';
     DOM.append( gamesListing);
 
     STATE['games'].forEach( game => listingInstance( gamesListing.id, game));
