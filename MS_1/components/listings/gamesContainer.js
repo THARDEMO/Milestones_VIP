@@ -15,6 +15,17 @@ function renderGamesContainer( parentID) {
     gamesListing.id = 'games';
     DOM.append( gamesListing);
 
-    STATE['games'].forEach( game => listingInstance( gamesListing.id, game));
 
+    const GAMES = STATE.Get( 'games');
+    GAMES.forEach( game => listingInstance( gamesListing.id, game));
 }
+
+function post_instance_GamesContainer( instanceData ) { 
+    listingInstance( 'games', instanceData);
+}
+
+function delete_instance_GamesContainer( ID ) {
+    delete_instance_listing( 'games', ID )
+}
+
+

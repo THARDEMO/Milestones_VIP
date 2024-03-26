@@ -25,15 +25,12 @@ function addState( e ) {
     //IF NOTHING HAS BEEN WRITTEN ABORT
     if( !textContent) return;
     
-    //EXTRACTS HIGHEST CURRENT ID + 1
-    let ID = Math.max(...STATE[target].map( e => e.id)) + 1;
-
-    STATE[target].push({
-        id: ID,
-        title: textContent,
-        rank: +rank,
-        favorite: false,
-    });
-
-    STATE.renderApp()
+    STATE.Post( {
+        entity: target,
+        row: {
+            title: textContent,
+            rank: +rank,
+            favourite: false
+        }
+     })
 }
