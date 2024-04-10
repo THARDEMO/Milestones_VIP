@@ -1,0 +1,79 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "sebbe",
+            "password": "arya"
+        },
+        {
+            "id": 1,
+            "name": "erik",
+            "password": "kombucha"
+        },
+        {
+            "name": "DeoHard",
+            "password": "MajBallz",
+            "id": 4
+        }
+    ],
+    "games": [
+        {
+            "id": 1,
+            "user_id": 2,
+            "name": "Chess",
+            "favorite": true,
+            "rating": 5
+        },
+        {
+            "id": 2,
+            "user_id": 1,
+            "name": "Dungeon and Dragons",
+            "favorite": true,
+            "rating": 5
+        },
+        {
+            "id": 3,
+            "user_id": 2,
+            "name": "Backgammon",
+            "favorite": true,
+            "rating": 5
+        },
+        {
+            "name": "God of War: Ragnar\u00f6k",
+            "rating": 10,
+            "favorite": true,
+            "user_id": 4,
+            "id": 4
+        }
+    ],
+    "characters": [
+        {
+            "id": 1,
+            "user_id": 1,
+            "name": "Arya Stark (Game of Thrones)",
+            "favorite": true,
+            "rating": 5
+        },
+        {
+            "id": 1,
+            "user_id": 2,
+            "name": "Spiderman",
+            "favorite": false,
+            "rating": 5
+        },
+        {
+            "id": 1,
+            "user_id": 1,
+            "name": "Batman",
+            "favorite": false,
+            "rating": 5
+        },
+        {
+            "name": "Kratos of Sparta",
+            "rating": 10,
+            "favorite": false,
+            "user_id": 4,
+            "id": 2
+        }
+    ]
+}

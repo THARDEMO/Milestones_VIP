@@ -17,6 +17,7 @@ const _state = {
     ],
 }
 
+
 const STATE = {
     Get,
     Post,
@@ -88,7 +89,7 @@ function Patch( data ) {
     updateCounter();
 }
 
-function Delete( data ) {;
+function Delete( data ) {
     /*
         data = entity_name, id
     */
