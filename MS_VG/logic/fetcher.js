@@ -1,5 +1,5 @@
 
-async function fetcher( rqst ) {
+export async function fetcher( rqst ) {
    
     try {
        const response = await fetch( rqst );

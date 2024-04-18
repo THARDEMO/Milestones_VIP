@@ -1,6 +1,6 @@
+import { STATE } from '../../logic/state.js';
 
-
-function renderControl( parentID, instanceData) {
+export function render( parentID, instanceData) {
 
     const parentDOM = document.getElementById( parentID);
     const buttonContent = instanceData;

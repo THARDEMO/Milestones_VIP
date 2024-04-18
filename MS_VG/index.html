@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MS_VG</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    
+    <main id="wrapper"></main>
+    
+    <script type="module">
+        import { STATE } from './logic/state.js';
+
+        (function(){
+            if( !localStorage.getItem( 'token')) {
+                STATE.renderLogin();
+            } else {
+                STATE.renderApp();
+            }
+        })();
+
+    </script>
+</body>
+</html>

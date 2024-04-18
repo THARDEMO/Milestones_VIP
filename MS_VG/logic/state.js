@@ -1,6 +1,14 @@
+import { PubSub } from './PubSub.js';
+import { fetcher } from './fetcher.js';
+
+//COMPONENTS 
+import * as ListingContainer from '../components/listings/listingContainer.js';
+import * as CounterContainer from '../components/counter/counterContainer.js';
+import * as CreateContainer from '../components/create/createContainer.js';
+
 const _state = {}
 
-const STATE = {
+export const STATE = {
     Get,
     Post,
     Patch,
@@ -32,18 +40,11 @@ async function Post( entity, rqst ) {
 
     const instanceData = JSON.parse(JSON.stringify(_state[entity].find( r => r.id === response.id)));
 
-    switch( entity) {
-        case 'games': 
-            post_instance_GamesContainer( instanceData );
-            break;
-        case 'characters': 
-            post_instance_CharactersContainer( instanceData );
-            break;
-    }
-
-
-    updateCounter();
-    //TODO counter!!!
+    PubSub.publish
+    ({
+        event: 'STATE::updated',
+        detail: {entity: entity, method: 'POST', data: instanceData}
+    })
 }
 
 async function Patch( entity, rqst ) {
@@ -58,8 +59,12 @@ async function Patch( entity, rqst ) {
 
     const instanceData = JSON.parse(JSON.stringify(_state[entity].find( r => r.id === response.id)));
 
-    patch_instance_listing( entity, instanceData);
-    updateCounter();
+    PubSub.publish
+    ({
+        event: 'STATE::updated',
+        detail: {entity: entity, method: 'PATCH', data: instanceData}
+    })
+
 }
 
 async function Delete( entity, rqst ) {;
@@ -71,19 +76,15 @@ async function Delete( entity, rqst ) {;
     for( const [ I, row ] of _state[entity]?.entries() ) {
         if( row.id !== response.id) continue;
 
-        //REMOVE ROW FROM ENITITY
         _state[entity].splice( I, 1);
     }   
 
-    switch( entity) {
-        case 'games':
-            delete_instance_GamesContainer( response.id )
-            break;
-        case 'characters':
-            delete_instance_CharactersContainer( response.id )
-            break;
-    }
-    updateCounter();
+    PubSub.publish
+    ({
+        event: 'STATE::updated',
+        detail: {entity: entity, method: 'DELETE', data: response.id}
+    })
+
 }
 
 
@@ -97,9 +98,9 @@ async function renderApp() {
 
     }
     
-    renderListingContainer( 'wrapper');
-    renderCounterContainer( 'wrapper'); 
-    renderCreateContainer( 'wrapper');
+    ListingContainer.render( 'wrapper');
+    CounterContainer.render( 'wrapper'); 
+    CreateContainer.render( 'wrapper');
 }
 
 function renderLogin() {

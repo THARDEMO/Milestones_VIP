@@ -12,7 +12,7 @@
         },
         {
             "name": "DeoHard",
-            "password": "lösenord",
+            "password": "l\u00f6senord",
             "id": 4
         },
         {
@@ -49,13 +49,6 @@
             "rating": 5
         },
         {
-            "name": "God of War: Ragnar\u00f6k",
-            "rating": 10,
-            "favorite": true,
-            "user_id": 4,
-            "id": 4
-        },
-        {
             "name": "Helldivers II",
             "rating": 9,
             "favorite": true,
@@ -68,6 +61,13 @@
             "favorite": false,
             "user_id": 4,
             "id": 6
+        },
+        {
+            "name": "God of War: Ragnar\u00f6k",
+            "rating": 10,
+            "favorite": true,
+            "user_id": 4,
+            "id": 7
         }
     ],
     "characters": [
